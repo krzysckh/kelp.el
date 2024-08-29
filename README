@@ -1,0 +1,14 @@
+client for https://kelp.krzysckh.org
+
+install:
+  (url-copy-file "https://kelp.krzysckh.org/api/?get=kelp.el" "/tmp/kelp.el")
+  (load "/tmp/kelp.el")
+  (kelp/refresh)
+  (kelp/install 'kelp.el)
+
+add to .emacs:
+  (add-to-list 'load-path "~/.emacs.d/kelp/")
+  (require 'kelp)
+  (kelp/prepare)
+  (kelp/refresh)
+  (kelp/update)
