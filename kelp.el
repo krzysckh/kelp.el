@@ -97,6 +97,7 @@
 (defun kelp/refresh (&optional cb)
   "refresh `kelp/available-scripts', call `cb' with the data if defined."
   (interactive)
+  (kelp/prepare)
   (request (concat kelp/instance "/api/?list")
     :sync t
     :parser #'kelp//json-read-l
