@@ -127,8 +127,13 @@
 
 (defun kelp/publish-buffer ()
   (interactive)
-  (let ((nam (read-string "Script name: " (buffer-name)))
-        (description (read-string "Description: ")))
+
+  (let ((nam (read-string "Script name: " (file-name-nondirectory (buffer-file-name))))
+        (description (read-string
+                      "Description: "
+                      (let ((s (car (split-string (buffer-string) "\n"))))
+                        (string-match "^;+ \\(.*\\) --- \\(.*?\\) \\(?:-\*-\\)\\|$" s)
+                        (match-string 2 s)))))
     (when (yes-or-no-p (concat "publish " nam " to " kelp/instance "?"))
       (request (concat kelp/instance "/api/?add")
         :type "POST"
