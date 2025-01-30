@@ -1,11 +1,11 @@
-;;; kelp.el --- siple kelp client -*- lexical-binding: t -*-
+;;; kelp.el --- simple kelp client -*- lexical-binding: t -*-
 
-;; Author: kpm <kpm@linux.pl>
+;; Author: kpm <kpm@krzysckh.org>
 ;; Created: 29 Aug 2024
 ;; Keywords: network, kelp, emacs, lisp
 ;; URL: https://github.com/krzysckh/kelp.el
 ;;
-;; Copyright (C) 2024 kpm <kpm@linux.pl>
+;; Copyright (C) 2024 kpm <kpm@krzysckh.org>
 ;;
 ;; Redistribution and use in source and binary forms, with or without
 ;; modification, are permitted provided that the following conditions are
